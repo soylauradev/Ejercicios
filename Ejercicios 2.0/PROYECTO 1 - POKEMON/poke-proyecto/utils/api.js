@@ -36,3 +36,16 @@ export async function pedirMasInfoDelPokemon(url) {
   // Retorna el objeto `data` que contiene los detalles completos del Pokémon.
   return data;
 }
+
+// Exporta una función asíncrona llamada `pedirTiposDePokemon` para obtener los tipos de Pokémon desde la API.
+export async function pedirTiposDePokemon() {
+  // Realiza una solicitud HTTP a la URL que obtiene los tipos de Pokémon, utilizando la función `fetch`.
+  // `await` asegura que se espere a que la respuesta esté disponible antes de continuar.
+  const response = await fetch(`${API_BASE}/type`);
+
+  // Convierte la respuesta de la API en un objeto JSON. `await` asegura que se espere a la conversión antes de seguir.
+  const data = await response.json();
+
+  // Retorna el array `results` de `data`, que contiene los tipos de Pokémon.
+  return data.results;
+}
