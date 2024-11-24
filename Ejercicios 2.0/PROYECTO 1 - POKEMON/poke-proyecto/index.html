@@ -6,22 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pokédex App</title>
   <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="./utils/Icono Pokemon.png" type="image/png" />
 </head>
 
 <body>
-  <div id="app">
-    <header>
-      <img src="logo pokemon.png" alt="Logo" id="logo" />
-      <input type="text" id="search" placeholder="Buscar Pokémon..." />
-      <select id="type-filter">
-        <option value="">Filtrar por Tipo</option>
-        <!-- Los tipos de Pokémon se añadirán dinámicamente -->
-      </select>
-    </header>
-    <main id="pokemon-container"></main>
-    <div id="pagination"></div>
-  </div>
-  <script src="/main.js" type="module"></script>
+    <div id="login-container" style="display: none;">
+      <h2>Inicia sesión</h2>
+      <a href="login.html">Ir a Login</a>
+    </div>
+
+    <div id="app">
+      <header>
+        <img id="logo" src="./utils/Logo Pokemon.png" alt="Logo">
+        <h1>Hola, Pokédex</h1>
+       <input type="text" id="search" placeholder="Buscar Pokémon"/>
+       <select id="type-filter">
+        <option value="">Filtrar por tipo</option>
+        <!-- Tipos Pokémons -->
+       </select>
+      </header>
+
+      <main id="pokemon-container"></main>
+
+      <script type="module" src="main.js"></script>
+    </div>
+
+    <script>
+      //Comprobamos si el usuario está logueado
+      if (!localStorage.getItem("loggedIn")) {
+        document.getElementById("app").style.display = "none";
+        document.getElementById("login-container").style.display = "block";
+      }
+    </script>
 </body>
 
 </html>

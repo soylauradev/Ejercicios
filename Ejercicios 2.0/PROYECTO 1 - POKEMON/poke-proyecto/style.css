@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+  background-color: #f2f2f2;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -23,20 +23,41 @@ header {
 }
 
 #logo {
-  width: 250px; /* Ajusta el tamaño del logo */
+  width: 180px; /* Ajusta el tamaño del logo */
   height: auto; /* Mantén la proporción del logo */
-  margin-right: 20px; /* Añade un margen a la derecha para separar del título */
+  margin-right: 10px; /* Añade un margen a la derecha para separar del título */
+  border-radius: 10px;
+  border: 3px solid #ffcb05;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 24px;
+  color: #00008B;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 #search {
-  padding: 8px;
+  padding: 10px;
   width: 200px;
   font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ffcb05;
+  background-color: #fff;
+  color: #333;
+  margin-left: 10px;
 }
 
 #type-filter {
-  padding: 8px;
+  padding: 10px;
   font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ffcb05;
+  background-color: #f8f8f8;
+  color: #333;
+  margin-left: 10px;
 }
 
 main {
